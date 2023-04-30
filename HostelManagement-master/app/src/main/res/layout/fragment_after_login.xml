@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="afterLogin"
+            type="com.example.hostelmanagement.student.AfterLogin" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hostelmanagement.student.AfterLogin">
+
+
+    <ImageView
+        android:id="@+id/hostel_logo"
+        android:layout_width="395dp"
+        android:layout_height="227dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/hostel" />
+
+    <TextView
+        android:id="@+id/hostel_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Welcome to IIITN Hostel Management"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hostel_logo"
+        app:layout_constraintVertical_bias="0.061" />
+
+    <Button
+        android:id="@+id/personal_details_button"
+        android:layout_width="291dp"
+        android:layout_height="89dp"
+        android:backgroundTint="@color/button"
+        android:text="Personal Details"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hostel_name"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <Button
+        android:id="@+id/attendence_button"
+        android:layout_width="291dp"
+        android:layout_height="89dp"
+        android:backgroundTint="@color/button"
+        android:text="Attendance"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personal_details_button"
+        app:layout_constraintVertical_bias="0.119" />
+
+    <Button
+        android:id="@+id/information_button"
+        android:layout_width="291dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="8dp"
+        android:text="information"
+        android:textSize="25sp"
+        android:backgroundTint="@color/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attendence_button"
+        app:layout_constraintVertical_bias="0.221" />
+
+    <Button
+        android:id="@+id/student_notice_button"
+        android:layout_width="291dp"
+        android:layout_height="89dp"
+        android:visibility="gone"
+        android:backgroundTint="@color/button"
+        android:text="Student Notice"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hostel_name"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <Button
+        android:id="@+id/mess_menu_button"
+        android:layout_width="291dp"
+        android:layout_height="89dp"
+        android:visibility="gone"
+        android:backgroundTint="@color/button"
+        android:text="Mess Menu"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personal_details_button"
+        app:layout_constraintVertical_bias="0.119" />
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_button"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hostel_logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

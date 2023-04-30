@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Hostel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="warden_email">johnson@cmr.edu.in</string>
+    <string name="wardem_password">Password</string>
+</resources>

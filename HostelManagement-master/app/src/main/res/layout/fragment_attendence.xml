@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".student.Attendence">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/Total_Attendence_Marked_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Attendance marked:"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.143" />
+
+        <CheckBox
+            android:id="@+id/attendence_textbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mark Attendance"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Total_Attendence_Marked_textview"
+            app:layout_constraintVertical_bias="0.379" />
+
+        <Button
+            android:id="@+id/submit_attendence_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/button"
+            android:text="Submit"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/attendence_textbox"
+            app:layout_constraintVertical_bias="0.346" />
+        <ImageView
+            android:id="@+id/attendence_successful_imageview"
+            android:layout_width="186dp"
+            android:layout_height="178dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.067"
+            app:srcCompat="@drawable/registered" />
+
+        <TextView
+            android:id="@+id/attendance_marked_successfullly_textview"
+            android:layout_width="336dp"
+            android:layout_height="73dp"
+            android:gravity="center_horizontal"
+            android:text="Attendance Marked Successfully!"
+            android:visibility="gone"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/attendence_successful_imageview"
+            app:layout_constraintVertical_bias="0.155" />
+
+        <Button
+            android:id="@+id/return_to_home_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Return to home"
+            android:backgroundTint="@color/button"
+            android:textSize="25sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/attendance_marked_successfullly_textview"
+            app:layout_constraintVertical_bias="0.354" />
+
+        <TextView
+            android:id="@+id/AttendenceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="@+id/Total_Attendence_Marked_textview"
+            app:layout_constraintStart_toStartOf="@+id/Total_Attendence_Marked_textview"
+            app:layout_constraintTop_toBottomOf="@+id/Total_Attendence_Marked_textview"
+            tools:text="589" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

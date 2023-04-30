@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment2">
+
+    <fragment
+        android:id="@+id/titleFragment2"
+        android:name="com.example.hostelmanagement.TitleFragment"
+        android:label="Hoatel Management">
+        <action
+            android:id="@+id/action_titleFragment2_to_studentLogin"
+            app:destination="@id/studentLogin" />
+        <action
+            android:id="@+id/action_titleFragment2_to_wardenLogin"
+            app:destination="@id/wardenLogin" />
+        <action
+            android:id="@+id/action_titleFragment2_to_parentsMain"
+            app:destination="@id/parentsMain" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentLogin"
+        android:name="com.example.hostelmanagement.student.StudentLogin"
+        android:label="Login"
+        tools:layout="@layout/fragment_student_login">
+        <action
+            android:id="@+id/action_studentLogin_to_afterLogin"
+            app:destination="@id/afterLogin"
+            app:popUpTo="@id/studentLogin"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/afterLogin"
+        android:name="com.example.hostelmanagement.student.AfterLogin"
+        android:label="Student"
+        tools:layout="@layout/fragment_after_login">
+        <action
+            android:id="@+id/action_afterLogin_to_personalDetails"
+            app:destination="@id/personalDetails" />
+        <action
+            android:id="@+id/action_afterLogin_to_attendence"
+            app:destination="@id/attendence" />
+        <action
+            android:id="@+id/action_afterLogin_to_studentNotice"
+            app:destination="@id/studentNotice" />
+        <action
+            android:id="@+id/action_afterLogin_to_messMenu"
+            app:destination="@id/messMenu" />
+        <action
+            android:id="@+id/action_afterLogin_to_titleFragment22"
+            app:destination="@id/titleFragment2"
+            app:popUpTo="@id/titleFragment2"
+            app:popUpToInclusive="true" />
+
+        <argument
+            android:name="singleStudent"
+            app:argType="com.example.hostelmanagement.database.Student" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalDetails"
+        android:name="com.example.hostelmanagement.student.PersonalDetails"
+        android:label="Student Details"
+        tools:layout="@layout/fragment_personal_details">
+
+        <argument
+            android:name="singleStudent"
+            app:argType="com.example.hostelmanagement.database.Student" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/attendence"
+        android:name="com.example.hostelmanagement.student.Attendence"
+        android:label="Attendence"
+        tools:layout="@layout/fragment_attendence">
+        <argument
+            android:name="singleStudent"
+            app:argType="com.example.hostelmanagement.database.Student" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentNotice"
+        android:name="com.example.hostelmanagement.student.StudentNotice"
+        android:label="Hostel Notice"
+        tools:layout="@layout/fragment_student_notice" />
+    <fragment
+        android:id="@+id/messMenu"
+        android:name="com.example.hostelmanagement.student.MessMenu"
+        android:label="Mess Menu"
+        tools:layout="@layout/fragment_mess_menu" />
+    <fragment
+        android:id="@+id/wardenLogin"
+        android:name="com.example.hostelmanagement.warden.WardenLogin"
+        android:label="Login">
+        <action
+            android:id="@+id/action_wardenLogin_to_wardenAfterLogin"
+            app:destination="@id/wardenAfterLogin"
+            app:popUpTo="@id/wardenLogin"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/wardenAfterLogin"
+        android:name="com.example.hostelmanagement.warden.WardenAfterLogin"
+        android:label="Warden">
+        <action
+            android:id="@+id/action_wardenAfterLogin_to_checkAdminNotice"
+            app:destination="@id/checkAdminNotice" />
+        <action
+            android:id="@+id/action_wardenAfterLogin_to_wardenUpdateNotice"
+            app:destination="@id/wardenUpdateNotice" />
+        <action
+            android:id="@+id/action_wardenAfterLogin_to_titleFragment2"
+            app:destination="@id/titleFragment2"
+            app:popUpTo="@id/titleFragment2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_wardenAfterLogin_to_wardenAllStudentDetials"
+            app:destination="@id/wardenAllStudentDetials" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkAdminNotice"
+        android:name="com.example.hostelmanagement.warden.CheckAdminNotice"
+        android:label="Admin Notice"
+        tools:layout="@layout/fragment_check_admin_notice" />
+    <fragment
+        android:id="@+id/wardenUpdateNotice"
+        android:name="com.example.hostelmanagement.warden.WardenUpdateNotice"
+        android:label="Update Notice"
+        tools:layout="@layout/fragment_warden_update_notice" />
+    <fragment
+        android:id="@+id/parentsMain"
+        android:name="com.example.hostelmanagement.Parents.ParentsMain"
+        android:label="Parents">
+        <action
+            android:id="@+id/action_parentsMain_to_parentsInformation"
+            app:destination="@id/parentsInformation"
+            app:popUpTo="@id/parentsMain"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_parentsMain_to_studentNotice"
+            app:destination="@id/studentNotice" />
+    </fragment>
+    <fragment
+        android:id="@+id/parentsInformation"
+        android:name="com.example.hostelmanagement.Parents.ParentsInformation"
+        android:label="Login">
+        <action
+            android:id="@+id/action_parentsInformation_to_personalDetails"
+            app:destination="@id/personalDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/wardenAllStudentDetials"
+        android:name="com.example.hostelmanagement.warden.WardenAllStudentDetials"
+        android:label="All Students" />
+</navigation>
